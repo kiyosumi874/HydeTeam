@@ -7,10 +7,11 @@ public class GyouzaKawaMove0 : MonoBehaviour
 {
     [SerializeField] private bool isLeftDir = true;
     [SerializeField,Range(0.0f,10.0f)] private float power = 1.0f;
+    [SerializeField,Range(0,10)] private float randomPower = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        power *= Random.Range(1.0f - randomPower / 10.0f, 1.0f + randomPower / 10.0f);
     }
 
     // Update is called once per frame
@@ -29,12 +30,12 @@ public class GyouzaKawaMove0 : MonoBehaviour
 
     void MoveLeft()
     {
-        this.transform.Translate(-power / 100.0f, 0.0f, 0.0f);
+        this.transform.Translate(-power * 3.0f * Time.deltaTime, 0.0f, 0.0f);
     }
 
     void MoveRight()
     {
-        this.transform.Translate(power / 100.0f, 0.0f, 0.0f);
+        this.transform.Translate(power * 3.0f * Time.deltaTime, 0.0f, 0.0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
