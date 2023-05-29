@@ -6,6 +6,7 @@ using UnityEngine;
 public class GyouzaKawaMove0 : MonoBehaviour
 {
     [SerializeField] private bool isLeftDir = true;
+    [SerializeField] private GameObject gyouzaPrefab;
     [SerializeField,Range(0.0f,10.0f)] private float power = 1.0f;
     [SerializeField,Range(0,10)] private float randomPower = 0;
     // Start is called before the first frame update
@@ -43,6 +44,12 @@ public class GyouzaKawaMove0 : MonoBehaviour
         if (collision.CompareTag("GyouzaKawaDestroyer"))
         {
             Destroy(this.gameObject);
+        }
+
+        if (collision.CompareTag("Meet"))
+        {
+            Instantiate(gyouzaPrefab, this.gameObject.transform);
+            //Destroy(this.gameObject);
         }
     }
 }
