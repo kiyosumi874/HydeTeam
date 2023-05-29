@@ -13,7 +13,6 @@ public class HitCheck : MonoBehaviour
         // Kawa タグを持つオブジェクトに当たったとき
         if(collision.gameObject.tag == "Kawa")
         {
-
             Debug.Log("Hit!!");
             // 自分を削除する
             Destroy(this.gameObject);
