@@ -3,74 +3,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GyouzaKawaMove1 : MonoBehaviour
+/// <summary>
+/// 餃子の皮の子クラス(軌道だけ変える)
+/// </summary>
+public class GyouzaKawaMove1 : GyouzaKawaMoveBase
 {
-    [SerializeField] private bool isLeftDir = true;
-    [SerializeField] private Sprite yakiGyouza;
-    [SerializeField, Range(0.0f, 10.0f)] private float deleteTime = 1.0f;
-    [SerializeField,Range(0.0f,10.0f)] private float power = 1.0f;
-    [SerializeField,Range(0,10)] private float randomPower = 0;
-    private bool isCombination = false; // 皮と肉だねが合体したらtrue
-    private float time = 0.0f; // 合体してからの時間
-
     private float rad = 0.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        power *= Random.Range(1.0f - randomPower / 10.0f, 1.0f + randomPower / 10.0f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // 合体したら移動しない
-        if (isCombination)
-        {
-            time += Time.deltaTime;
-            if (deleteTime < time)
-            {
-                Destroy(this.gameObject);
-            }
-            return;
-        }
-
-        // 左方向に飛ばす場合
-        if (isLeftDir)
-        {
-            MoveLeft();
-            return;
-        }
-
-        // 右方向に飛ばす場合
-        MoveRight();
-    }
-
-    void MoveLeft()
+    protected override void MoveLeft()
     {
         rad += Mathf.PI / 180.0f;
         this.transform.Translate(-power * 3.0f * Time.deltaTime, Mathf.Cos(rad) / Random.Range(20.0f, 100.0f), 0.0f);
     }
 
-    void MoveRight()
+    protected override void MoveRight()
     {
         this.transform.Translate(power * 3.0f * Time.deltaTime, 0.0f, 0.0f);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("GyouzaKawaDestroyer"))
-        {
-            Destroy(this.gameObject);
-        }
-
-        if (collision.CompareTag("Meet"))
-        {
-            isCombination = true;
-            GyouzaCounter.Count();
-            Debug.Log(GyouzaCounter.Get());
-            GetComponent<SpriteRenderer>().sprite = yakiGyouza;
-            GetComponent<CircleCollider2D>().enabled = false;
-            transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-        }
     }
 }
