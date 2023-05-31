@@ -30,9 +30,6 @@ public class GyouzaKawaGenerator : MonoBehaviour
             Instantiate(gyouzaKawaPrefabs[prefabIndex], this.transform);
             prefabIndex = Random.Range(0, prefabSize);
         }
-        Debug.Log(nowTime);
-        Debug.Log(prefabIndex);
-        Debug.Log(prefabSize);
         nowTime += Time.deltaTime;
     }
 }

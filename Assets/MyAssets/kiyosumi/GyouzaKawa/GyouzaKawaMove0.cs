@@ -63,6 +63,8 @@ public class GyouzaKawaMove0 : MonoBehaviour
         if (collision.CompareTag("Meet"))
         {
             isCombination = true;
+            GyouzaCounter.Count();
+            Debug.Log(GyouzaCounter.Get());
             GetComponent<SpriteRenderer>().sprite = yakiGyouza;
             GetComponent<CircleCollider2D>().enabled = false;
             transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
