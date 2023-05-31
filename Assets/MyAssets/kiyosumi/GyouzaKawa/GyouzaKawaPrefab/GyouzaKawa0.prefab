@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4657439955426409059}
   - component: {fileID: 4657439955426409063}
   m_Layer: 0
-  m_Name: GyouzaKawa
+  m_Name: GyouzaKawa0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -595,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[0]
@@ -604,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 4657439955426409058, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
+      objectReference: {fileID: 4839472285469170615, guid: 35edcbcf7246334458a2484e88f4b6b1, type: 3}
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[2]
       value: 
