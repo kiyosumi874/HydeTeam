@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176e10260947e134b8afc99451a0fe30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: TrailerScene
+  nextScene: GameScene
   delayTime: 2
   fadeImg: {fileID: 494983731}
 --- !u!1 &1769684660
