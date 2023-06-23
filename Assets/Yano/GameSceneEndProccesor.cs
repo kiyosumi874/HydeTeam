@@ -6,7 +6,7 @@ using UnityEngine;
 /// </summary>
 public class GameSceneEndProccesor : MonoBehaviour
 {
-    [SerializeField] private TimeCount timer;//遊んでいるときの時間を計る
+    [SerializeField] private CountDown timer;//遊んでいるときの時間を計る
     [SerializeField] private SceneChangeProccesor sceneChange;//シーンを変更するやつ
 
     private void Update()

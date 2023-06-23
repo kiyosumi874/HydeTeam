@@ -7,16 +7,20 @@ using UnityEngine.UI;
 
 public class FadeInFadeOut : MonoBehaviour
 {
-    [SerializeField] private Image fadeImg;
+    [SerializeField] private Image fadeImg;//シーン遷移する際にアルファ値をいじる
     [SerializeField] [Header("フェードアウト後に動く")] private List<GameObject> postFadeOutRunObject;
     //フェードアウト終了したか
-    public bool isFadeOutEnd { get; private set; }
+    public bool isEndFadeOut { get; private set; }
     
 
     private void Start()
     {
-        isFadeOutEnd = false;
-        
+        isEndFadeOut = false;
+        //フェードアウトしてから動くやつを動けるようにする
+        foreach (GameObject obj in postFadeOutRunObject)
+        {
+            obj.SetActive(false);
+        }
         FadeOut();
     }
     
@@ -53,7 +57,7 @@ public class FadeInFadeOut : MonoBehaviour
         //大体透明になったら
         yield return new WaitUntil(() => fadeImg.color.a < 0.01f); 
         fadeImg.GameObject().SetActive(false);
-        isFadeOutEnd = true;
+        isEndFadeOut = true;
         //フェードアウトしてから動くやつを動けるようにする
         foreach(GameObject obj in postFadeOutRunObject)
         {
