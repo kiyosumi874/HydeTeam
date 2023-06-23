@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1515ae293aed9547b1b369745c3c1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: TrailerScene
+  nextScene: GameScene
   delayTime: 1
 --- !u!111 &1769684667
 Animation:

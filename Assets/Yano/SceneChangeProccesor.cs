@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SceneChangeProccesor : MonoBehaviour
+public class SceneChangeProccesor
 {
     // Ÿ‚ÌƒV[ƒ“‚Ì–¼‘O
     [SerializeField] private string nextScene;
