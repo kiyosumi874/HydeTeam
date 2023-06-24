@@ -18,9 +18,14 @@ public class TimeCount : MonoBehaviour
 
     public bool finishFlag = false;    // 計測終了判定フラグ
 
+    [SerializeField]
+    private SceneChanger sceneChanger;
+
     // Start is called before the first frame update
     void Start()
     {
+        sceneChanger.GetComponent<SceneChanger>();
+
         // 制限時間の設定
         totalTime = minute * 60 + seconds;
         oldSeconds = 0.0f;
@@ -64,6 +69,11 @@ public class TimeCount : MonoBehaviour
             minute = 0;
             seconds = 0.0f;
             finishFlag = true;
+        }
+
+        if(finishFlag)
+        {
+            sceneChanger.ChangeScene("ResultScene");
         }
     }
 }
