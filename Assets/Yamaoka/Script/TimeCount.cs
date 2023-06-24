@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class TimeCount : MonoBehaviour
 {
@@ -73,7 +74,9 @@ public class TimeCount : MonoBehaviour
 
         if(finishFlag)
         {
-            sceneChanger.ChangeScene("ResultScene");
+            DOVirtual.DelayedCall(2, () =>
+            sceneChanger.ChangeScene("ResultScene")
+            );
         }
     }
 }

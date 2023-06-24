@@ -28,11 +28,7 @@ public class SceneChanger : MonoBehaviour
 
     public void Update()
     {
-        // 左クリックでシーン遷移
-        if(Input.GetMouseButtonDown(1))
-        {
-            ChangeScene(nextScene);
-        }
+
     }
 
     /// <summary>
