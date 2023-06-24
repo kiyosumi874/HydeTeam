@@ -22,6 +22,10 @@ public class TimeCount : MonoBehaviour
     [SerializeField]
     private SceneChanger sceneChanger;
 
+    // ゲーム終了時に、非表示にするゲームオブジェクト
+    [SerializeField]
+    private List<GameObject> stopGameObjects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +81,11 @@ public class TimeCount : MonoBehaviour
             DOVirtual.DelayedCall(2, () =>
             sceneChanger.ChangeScene("ResultScene")
             );
+
+            for(int i = 0; i < stopGameObjects.Count; i++)
+            {
+                stopGameObjects[i].SetActive(false);
+            }
         }
     }
 }
