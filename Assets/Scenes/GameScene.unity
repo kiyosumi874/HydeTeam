@@ -962,6 +962,9 @@ MonoBehaviour:
   timeText: {fileID: 1324598948}
   finishFlag: 0
   sceneChanger: {fileID: 55430369}
+  stopGameObjects:
+  - {fileID: 1176077589}
+  - {fileID: 332711239}
 --- !u!4 &1573706028
 Transform:
   m_ObjectHideFlags: 0
