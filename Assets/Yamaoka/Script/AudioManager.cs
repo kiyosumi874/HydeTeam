@@ -14,11 +14,34 @@ public class AudioManager : MonoBehaviour
     private AudioClip titleBGM;
     [SerializeField]
     private AudioClip resultBGM;
-    [SerializeField]
-    private AudioClip hit;
+
     // シングルトンのインスタンス
     public static AudioManager instance;
 
+    public bool onTitleScene = false;
+    public bool onGameScene = false;
+    public bool onResultScene = false;
+
+    private void Start()
+    {
+        if (onTitleScene)
+        {
+            TitleBGM();
+        }
+        else if (onGameScene)
+        {
+            GameBGM();
+        }
+        else if (onResultScene)
+        {
+            ResultBGM();
+        }
+    }
+
+    private void Update()
+    {
+
+    }
 
     public void GameBGM()
     {
@@ -33,11 +56,6 @@ public class AudioManager : MonoBehaviour
     public void ResultBGM()
     {
         audioSource.PlayOneShot(resultBGM);
-    }
-
-    public void Hit()
-    {
-        audioSource.PlayOneShot(hit);
     }
 
 
