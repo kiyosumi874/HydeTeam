@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: gyouza
+    uniqueID: 3903603979
+    locked: 0
