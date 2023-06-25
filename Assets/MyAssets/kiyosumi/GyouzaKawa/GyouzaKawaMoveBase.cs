@@ -88,6 +88,7 @@ public class GyouzaKawaMoveBase : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = yakiGyouza;
             GetComponent<CircleCollider2D>().enabled = false;
             transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
