@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    //AudioSource
     [SerializeField]
-    private AudioSource audioSource;    //AudioSource
+    private AudioSource audioSource;
     // AudioClip
     [SerializeField]
     private AudioClip gameBGM;
@@ -15,6 +16,9 @@ public class AudioManager : MonoBehaviour
     private AudioClip resultBGM;
     [SerializeField]
     private AudioClip hit;
+    // シングルトンのインスタンス
+    public static AudioManager instance;
+
 
     public void GameBGM()
     {
@@ -34,6 +38,24 @@ public class AudioManager : MonoBehaviour
     public void Hit()
     {
         audioSource.PlayOneShot(hit);
+    }
+
+
+    /// <summary>
+    /// 他のゲームオブジェクトにアタッチされているか調べる
+    /// アタッチされている場合は破棄する。
+    /// </summary>
+    void CheckInstance()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }
