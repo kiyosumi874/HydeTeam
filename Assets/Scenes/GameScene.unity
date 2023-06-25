@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176e10260947e134b8afc99451a0fe30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: ResultScene
+  nextScene: ResultScene_Yamaoka
   delayTime: 2
   fadeImg: {fileID: 1061712384}
 --- !u!4 &55430370

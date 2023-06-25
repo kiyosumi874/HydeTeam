@@ -79,7 +79,7 @@ public class TimeCount : MonoBehaviour
         if(finishFlag)
         {
             DOVirtual.DelayedCall(2, () =>
-            sceneChanger.ChangeScene("ResultScene")
+            sceneChanger.ChangeScene("ResultScene_Yamaoka")
             );
 
             for(int i = 0; i < stopGameObjects.Count; i++)
