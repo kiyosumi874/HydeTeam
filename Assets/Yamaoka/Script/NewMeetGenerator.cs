@@ -25,7 +25,7 @@ public class NewMeetGenerator : MonoBehaviour
 
         //ボタン感知
         //Enterかspaceか左クリックでtrueにする
-        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             TapBottan = true;
         }
