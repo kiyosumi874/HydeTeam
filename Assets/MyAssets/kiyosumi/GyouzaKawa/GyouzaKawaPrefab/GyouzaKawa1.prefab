@@ -88,3 +88,4 @@ MonoBehaviour:
   deleteTime: 1
   power: 10
   randomPower: 1
+  hitEffect: {fileID: 6432416369721606812, guid: a9502a564678fca43991e39591f1105b, type: 3}

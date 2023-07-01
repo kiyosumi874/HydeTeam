@@ -13,6 +13,7 @@ public class GyouzaKawaMoveBase : MonoBehaviour
     [SerializeField, Range(0.0f, 10.0f)] private float deleteTime = 1.0f; // 餃子が表示されてから消えるまでの時間
     [SerializeField, Range(0.0f, 10.0f)] protected float power = 1.0f; // 餃子の皮が飛ぶ速さ
     [SerializeField, Range(0, 10)] private float randomPower = 0; // 餃子の皮が飛ぶ速さのランダムの幅
+    [SerializeField] private ParticleSystem hitEffect;
     private bool isCombination = false; // 皮と肉だねが合体したらtrue
     private float time = 0.0f; // 合体してからの時間
 
@@ -21,6 +22,7 @@ public class GyouzaKawaMoveBase : MonoBehaviour
     /// </summary>
     void Start()
     {
+        hitEffect.Pause();
         power *= Random.Range(1.0f - randomPower / 10.0f, 1.0f + randomPower / 10.0f);
     }
 
@@ -86,6 +88,7 @@ public class GyouzaKawaMoveBase : MonoBehaviour
             GyouzaCounter.Count();
             Debug.Log(GyouzaCounter.Get());
             GetComponent<SpriteRenderer>().sprite = yakiGyouza;
+            hitEffect.Play();
             GetComponent<CircleCollider2D>().enabled = false;
             transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             GetComponent<AudioSource>().Play();
