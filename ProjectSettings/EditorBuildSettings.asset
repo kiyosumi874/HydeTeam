@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TrailerScene.unity
     guid: c3eda864aae12c740b72422ff0ca8757
   - enabled: 1
+    path: Assets/komatsu/Result Scene/Result Scene.unity
+    guid: 248b73e8d5562374dbd243af76d11160
+  - enabled: 1
     path: Assets/Scenes/ResultScene.unity
     guid: a9bd0faeb85288446aa34cd6cd0b08a3
   - enabled: 1
