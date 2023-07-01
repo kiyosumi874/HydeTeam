@@ -15,6 +15,7 @@ public class FadeInFadeOut : MonoBehaviour
 
     private void Start()
     {
+        
         isEndFadeOut = false;
         //フェードアウトしてから動くやつを動けるようにする
         foreach (GameObject obj in postFadeOutRunObject)

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setAddRad: 1
   setMovePower: 0.1
-  setMovePowerSeed: 2
-  setAddMovePower: 0.3
+  setMovePowerSeed: 0
+  setAddMovePower: 0.15

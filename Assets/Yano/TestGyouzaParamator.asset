@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc14d5f51feaf74bbc05ac95049dd3a, type: 3}
   m_Name: TestGyouzaParamator
   m_EditorClassIdentifier: 
-  setAddRad: 2
+  setAddRad: 7
   setMovePower: 2
   setMovePowerSeed: 1
   setAddMovePower: 0.001

@@ -20,4 +20,11 @@ public class GyouzaCounter
     {
         return count;
     }
+    /// <summary>
+    /// éLq‚Ì”‚ğ0‚É‚·‚é
+    /// </summary>
+    static public void Init()
+    {
+        count = 0;
+    }
 }
