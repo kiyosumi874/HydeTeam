@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 /// <summary>
 /// 餃子の皮達を生成するクラス
 /// </summary>
@@ -13,7 +13,9 @@ public class GyouzaKawaGenerator : MonoBehaviour
 
     private float nowTime; // nowTimeが初期化されてから経過した時間
     private float instantiateTime; // 次に新しい餃子の皮が生成されるまでの時間
-
+    private float spriteChangeSpan;//spriteの変更するタイミング
+    [SerializeField] private List<Sprite> spritePrefabs;
+    [SerializeField] private Image image;
     [SerializeField] private float randTimeMax = 6.0f; // nextTimeのランダム値の最大値
     [SerializeField] private float randTimeMin = 3.0f; // nextTimeのランダム値の最小値
 
@@ -26,6 +28,7 @@ public class GyouzaKawaGenerator : MonoBehaviour
         instantiateTime = Random.Range(randTimeMin, randTimeMax);
         prefabSize = gyouzaKawaPrefabs.Count;
         prefabIndex = Random.Range(0, prefabSize);
+        spriteChangeSpan = instantiateTime / spritePrefabs.Count;
     }
 
     /// <summary>
@@ -39,7 +42,7 @@ public class GyouzaKawaGenerator : MonoBehaviour
             Instantiate(gyouzaKawaPrefabs[prefabIndex], this.transform);
             CleanUpAfterInstantiate();
         }
-
+        ChangeSprite();
         // 時間を進める
         nowTime += Time.deltaTime;
     }
@@ -52,6 +55,7 @@ public class GyouzaKawaGenerator : MonoBehaviour
         nowTime = 0.0f;
         instantiateTime = Random.Range(randTimeMin, randTimeMax);
         prefabIndex = Random.Range(0, prefabSize);
+        spriteChangeSpan = instantiateTime / spritePrefabs.Count;
     }
 
     /// <summary>
@@ -61,5 +65,10 @@ public class GyouzaKawaGenerator : MonoBehaviour
     private bool CheckIsInstantiate()
     {
         return nowTime > instantiateTime;
+    }
+    private void ChangeSprite()
+    {
+        int spriteIndex = (int)(nowTime/ spriteChangeSpan);
+        image.sprite = spritePrefabs[spriteIndex];
     }
 }
