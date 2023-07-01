@@ -14,8 +14,8 @@ public class GyouzaKawaGenerator : MonoBehaviour
     private float nowTime; // nowTimeが初期化されてから経過した時間
     private float instantiateTime; // 次に新しい餃子の皮が生成されるまでの時間
     private float spriteChangeSpan;//spriteの変更するタイミング
-    [SerializeField] private List<Sprite> spritePrefabs;
-    [SerializeField] private Image image;
+    [SerializeField] private List<string> stringPrefab;
+    [SerializeField] private Text text;
     [SerializeField] private float randTimeMax = 6.0f; // nextTimeのランダム値の最大値
     [SerializeField] private float randTimeMin = 3.0f; // nextTimeのランダム値の最小値
 
@@ -28,7 +28,7 @@ public class GyouzaKawaGenerator : MonoBehaviour
         instantiateTime = Random.Range(randTimeMin, randTimeMax);
         prefabSize = gyouzaKawaPrefabs.Count;
         prefabIndex = Random.Range(0, prefabSize);
-        spriteChangeSpan = instantiateTime / spritePrefabs.Count;
+        spriteChangeSpan = instantiateTime / stringPrefab.Count;
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class GyouzaKawaGenerator : MonoBehaviour
             Instantiate(gyouzaKawaPrefabs[prefabIndex], this.transform);
             CleanUpAfterInstantiate();
         }
-        ChangeSprite();
+        ChangeString();
         // 時間を進める
         nowTime += Time.deltaTime;
     }
@@ -55,7 +55,7 @@ public class GyouzaKawaGenerator : MonoBehaviour
         nowTime = 0.0f;
         instantiateTime = Random.Range(randTimeMin, randTimeMax);
         prefabIndex = Random.Range(0, prefabSize);
-        spriteChangeSpan = instantiateTime / spritePrefabs.Count;
+        spriteChangeSpan = instantiateTime / stringPrefab.Count;
     }
 
     /// <summary>
@@ -66,9 +66,12 @@ public class GyouzaKawaGenerator : MonoBehaviour
     {
         return nowTime > instantiateTime;
     }
-    private void ChangeSprite()
+    /// <summary>
+    /// 皮を出す予兆を見せる
+    /// </summary>
+    private void ChangeString()
     {
-        int spriteIndex = (int)(nowTime/ spriteChangeSpan);
-        image.sprite = spritePrefabs[spriteIndex];
+        int stringIndex = (int)(nowTime/ spriteChangeSpan);
+        text.text = stringPrefab[stringIndex];
     }
 }
