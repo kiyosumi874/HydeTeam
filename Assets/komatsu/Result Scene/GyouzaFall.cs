@@ -10,7 +10,7 @@ public class GyouzaFall : MonoBehaviour
     float GyozaX = 0;                       //餃子を落とす位置のY座標
     const float GyozaY = 5.0f;              //餃子を落とす位置のY座標
     int Cnt = 0;                            //餃子を落とした数を数えるカウント
-    const int MaxGyouzaNum = 5;             //餃子の数の最大値
+    const int MaxGyouzaNum = 20;             //餃子の数の最大値
     float deltatime = 0;                    //デルタタイム
     const float span = 0.45f;               //餃子を落とすクールタイム
     public bool DrawscoreSetFlg = false;    //DrawScoreをするかどうかのフラグ
