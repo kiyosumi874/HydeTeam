@@ -17,8 +17,16 @@ public class GyouzaKawaMove2 : GyouzaKawaMoveBase
     }
     protected override void MoveLeft()
     {
-        rad += Mathf.PI / 180.0f * moveParamator.addRad;
-        this.transform.Translate(-power * 3.0f * Time.deltaTime, Mathf.Cos(rad) / Random.Range(20.0f, 100.0f), 0.0f);
+        Debug.Log(moveParamator.addRad);
+        if (moveParamator.addRad > 0.01f)
+        {
+            rad += Mathf.PI / 180.0f * moveParamator.addRad;
+            this.transform.Translate(-power * 3.0f * Time.deltaTime, Mathf.Cos(rad) / Random.Range(20.0f, 100.0f), 0.0f);
+        }
+        else
+        { 
+            this.transform.Translate(-power * 3.0f * Time.deltaTime, 0.0f, 0.0f);
+        }
         power += moveParamator.addMovePower;
     }
 

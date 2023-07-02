@@ -86,6 +86,6 @@ MonoBehaviour:
   isLeftDir: 1
   yakiGyouza: {fileID: 21300000, guid: 6180fd8ac15199548b33008a6fa9c040, type: 3}
   deleteTime: 1
-  power: 4
-  randomPower: 3
+  power: 2
+  randomPower: 0
   hitEffect: {fileID: 6432416369721606812, guid: a9502a564678fca43991e39591f1105b, type: 3}

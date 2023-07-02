@@ -1742,7 +1742,7 @@ RectTransform:
   m_GameObject: {fileID: 1321033713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 5.5, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 350452319}
@@ -2357,19 +2357,19 @@ PrefabInstance:
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 4657439955426409058, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
+      objectReference: {fileID: 4657439955426409058, guid: ca4414ffe984cbc408b3aa0ca2d868c5, type: 3}
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 4839472285469170615, guid: 35edcbcf7246334458a2484e88f4b6b1, type: 3}
+      objectReference: {fileID: 4657439955426409058, guid: f7da311b3c11501468178f82bc27e7ba, type: 3}
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 4657439955426409058, guid: ca4414ffe984cbc408b3aa0ca2d868c5, type: 3}
+      objectReference: {fileID: 4657439955426409058, guid: c928520df647415429b3141d69a225c9, type: 3}
     - target: {fileID: 3896927406022179257, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
       propertyPath: gyouzaKawaPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 4657439955426409058, guid: f7da311b3c11501468178f82bc27e7ba, type: 3}
+      objectReference: {fileID: 4657439955426409058, guid: e53d4680c4b3c5e4aa14f50c44687d36, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9cdaa02664b64d90ac01e428f852f, type: 3}
 --- !u!1001 &4310572363096280916

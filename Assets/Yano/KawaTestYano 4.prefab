@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4782746382987572401}
   - component: {fileID: 6581918638987150055}
   m_Layer: 0
-  m_Name: KawaTestYano 2
+  m_Name: KawaTestYano 4
   m_TagString: Kawa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   power: 0
   randomPower: 0
   hitEffect: {fileID: 4248784683209950553}
-  moveParamator: {fileID: 11400000, guid: b077772e7bfc23a419c0aec601332ede, type: 2}
+  moveParamator: {fileID: 11400000, guid: c8c08e48802da004da2b91d0bbf42578, type: 2}
 --- !u!82 &6581918638987150055
 AudioSource:
   m_ObjectHideFlags: 0
