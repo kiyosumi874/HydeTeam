@@ -55,16 +55,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4657439955426409063, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
-      propertyPath: yakiGyouza
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657439955426409063, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
-      propertyPath: randomPower
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4657439955426409063, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
 --- !u!1 &4839472285469170615 stripped
 GameObject:
@@ -88,4 +79,9 @@ MonoBehaviour:
   deleteTime: 1
   power: 4
   randomPower: 3
-  hitEffect: {fileID: 6432416369721606812, guid: a9502a564678fca43991e39591f1105b, type: 3}
+  hitEffect: {fileID: 9074120503097598276}
+--- !u!198 &9074120503097598276 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9107982779330756753, guid: e16839c3a7743384eb900e1cbc16b9e8, type: 3}
+  m_PrefabInstance: {fileID: 255524929034396117}
+  m_PrefabAsset: {fileID: 0}
